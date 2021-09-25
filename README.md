@@ -1,2 +1,2 @@
-# unity-old
-Repository consisting of chunks of code saved from my first own projects
+# Unity Repositorio básico
+Contiene varios snippets de código muy útiles que utilizo además muy a menudo prototipando pequeños proyectos.
