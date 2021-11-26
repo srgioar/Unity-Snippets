@@ -1,0 +1,59 @@
+
+
+FUNCIONAMIENTO DEL JUEGO
+
+al hacer hover se marca la imagen sobre el CANVAS
+este hover tiene varios tipos
+
+ÍNDICE DE SCRIPTING
+
+CharIdentifier
+TableChecker
+TableController
+TargetData / Clase con datos y métodos relativos a TargetDataHolder
+TileIdentifier
+Values Checker
+
+0. VALORES Y SCRIPTS DE ASISTENCIA
+    -ValuesChecker (Trabajo con booleanos, dev. de métodos)
+        // Clase estática, por refinar
+    -CharIdentifier
+        // Anexado a los actores, métodos y propiedades
+    -TileIdentifier
+        // Anexado a los tiles, métodos y propiedades
+
+1. BOARD Manager
+    -Board CREATE -> Por separar
+        // Instancia el array de gameobjects que comprende el TABLERO
+    -Board INIT -> Por separar
+        // Instancia valores de debug para poder testear y jugar
+
+1. CURSOR CONTROLLER
+    -Hover
+    -Target
+    -Select
+
+2. CURSOR DATA MANAGER
+    -TargetData (Clase) -> DEPRECATED
+    -TargetDataHolder -> Por desgranar
+        // Contiene toda la información de dos posiciones
+        // Cuando la posición original es un actor usable (personaje)
+        // Y la posición destino un actor interactuable (Tile, enemigo)
+
+2. INTERACTIVE CONTROLLER
+    -Move
+    -Attack
+    -Pick
+
+3. MAIN GAME FLOW CONTROLLER
+    -Game Checker
+        // Chequea si el juego puede continuar o debe acabar
+    -Turn Manager
+        // Chequea el cambio de turno y las condiciones de éstos
+
+4. UI MANAGERS
+    -UIActionsManager ->
+        // Gestiona botones de interacción
+    -UIValuesManager ->
+        // Debug y valores por pantalla
+        // Aislar de ValuesManager instanciación de energía de actor
